@@ -1,0 +1,48 @@
+'''
+Fibonacci Sequence - 
+Enter a number and have the program generate the Fibonacci sequence to that number or to the Nth number.
+'''
+
+def fibonacci_to_nth(n): # returns a list to the Nth number
+  result = [0,1]
+  for i in range(len(result),n+1):
+    result.append(result[i-1]+result[i-2])
+  return result
+  
+  
+def fibonacci_to_num(number): returns a list to a number
+  result = [0,1]
+  i = len(result)
+  while True: 
+    next_num = result[i-1]+result[i-2]
+    if next_num <= number:
+      result.append(next_num)
+      i+=1
+    else:
+      break
+  retun result
+  
+  
+def fib_recur_to_nth(n): # prints out all numbers to the nth using a for loop
+    a, b = 0, 1
+    for i in range(n+1):
+      print(a)
+      a, b = b, a+b
+      
+      
+def fib_recur_while(n): # prints out all numbers to a number 'n' using a while loop
+  a, b = 0, 1
+  while True:
+    if a <= n:
+      print(a)
+      a, b = b, a+b
+    else:
+      break
+      
+def fib(n): # using recursive method to get the nth number
+  if n = 0:
+    return 0
+  elif n = 1 or n = 2:
+    return 1
+  else:
+    return fib(n-1)+fib(n-2)
