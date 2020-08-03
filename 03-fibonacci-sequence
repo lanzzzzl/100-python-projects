@@ -3,6 +3,7 @@ Fibonacci Sequence -
 Enter a number and have the program generate the Fibonacci sequence to that number or to the Nth number.
 '''
 
+
 def fibonacci_to_nth(n): # returns a list to the Nth number
   result = [0,1]
   for i in range(len(result),n+1):
@@ -46,3 +47,13 @@ def fib(n): # using recursive method to get the nth number
     return 1
   else:
     return fib(n-1)+fib(n-2)
+
+
+def generator_fibonacci_to_nth(n): # using a generator function to return a alist to the Nth fib num
+  a = 1
+  b = 1
+  for i in range(n):
+    yield a
+    a, b = b, a+b
+for i in generator_fibonacci_to_nth(10):
+  print(i)
